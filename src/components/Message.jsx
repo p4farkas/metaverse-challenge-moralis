@@ -14,13 +14,18 @@ function Message({ message }) {
       }`}
     >
       <div
-        className={`relative h-8 w-8 ${
+        className={`relative h-8 w-8 shadow-xl rounded-full ${
           isUserMessage && "order-last my-2 ml-2"
         }`}
       >
-        <Avatar userName={user.getUsername()} />
+        <Avatar userName={message.get("user")} />
       </div>
-      <TimeAgo className={`text-[10px] italic text-gray-400 ${isUserMessage && "order-first pr-1"}`} datetime={message.createdAt}/>
+      <TimeAgo
+        className={`text-[10px] italic text-gray-400 ${
+          isUserMessage && "order-first pr-1"
+        }`}
+        datetime={message.createdAt}
+      />
       <div
         className={`flex space-x-4 p-3 rounded-2xl ${
           isUserMessage

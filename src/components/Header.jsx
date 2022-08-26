@@ -21,7 +21,7 @@ function Header() {
   const address = user.get("ethAddress");
 
   return (
-    <div className="sticky top-0 mt-0 bg-slate-600 rounded-3xl z-20">
+    <div className="sticky top-0 mt-0 bg-zinc-600 rounded-3xl z-20">
       <div className="text-center">
         <div className="relative h-40 w-40 mx-auto rounded-full shadow-2xl">
           <Avatar userName={user.getUsername()} setUsername={setUsername} />
